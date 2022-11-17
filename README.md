@@ -1,1 +1,1 @@
-# todo
+Simple to-do app using React and Tailwind
