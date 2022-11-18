@@ -1,8 +1,15 @@
 import { useState } from 'react'
 
 function App() {
-  const [list, setList] = useState([])
   const [item, setItem] = useState("")
+  const [list, setList] = useState([])
+
+  const addItem = () => {
+    if (item !== "") {
+      setList(list.concat(item))
+      setItem("")
+    }
+  }
 
   return (
     <>
@@ -18,10 +25,8 @@ function App() {
               }}
           />
           <button 
-            className="px-4 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition transition-250"
-            onClick={() => {
-              setList(list => list.concat(item));
-            }}  
+            className="px-4 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition duration-300"
+            onClick={addItem}
           >+</button>
       </div>
 
