@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <h1 className="flex justify-center mt-8 text-3xl tracking-widest">the list</h1>
+      <h1 className="flex justify-center mt-8 text-3xl tracking-widest">checked twice</h1>
 
       <div className="box-border mx-auto w-80 m-10 md:w-96">
         <div className="flex">
