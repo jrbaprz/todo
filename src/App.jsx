@@ -4,6 +4,13 @@ function App() {
   const [item, setItem] = useState("")
   const [list, setList] = useState([])
 
+  const deleteItem = (text) => {
+    const newList = list.filter((item) => {
+      return item !== text;
+    });
+    setList(newList)
+  }
+
   return (
     <>
       <h1 className="flex justify-center mt-8 text-3xl tracking-widest">check.</h1>
@@ -36,6 +43,9 @@ function App() {
               <div className="flex ml-4">          
                 <button 
                   className="px-2 mr-3 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition duration-300"
+                  onClick={() => {
+                    deleteItem(item)
+                  }}
                   >-</button>
                 <li key={index} className="flex tracking-widest text-sm font-semibold items-center">{item}</li>
               </div>
