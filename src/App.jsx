@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <h1 className="flex justify-center mt-8 text-3xl tracking-widest">check.</h1>
+      <h1 className="flex justify-center mt-8 text-3xl tracking-widest">the list</h1>
 
       <div className="box-border mx-auto w-80 m-10 md:w-96">
         <div className="flex">
@@ -25,7 +25,13 @@ function App() {
               onChange={(e) => {
                 setItem(e.target.value)
               }}
-          />
+              onKeyPress={(e) => {
+                if(e.key === "Enter") {
+                  setList(list.concat(item))
+                  setItem("")
+                }
+              }}
+              />
           <button 
             className="px-4 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition duration-300"
             onClick={() => {
