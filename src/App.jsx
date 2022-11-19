@@ -29,18 +29,21 @@ function App() {
           }
           >+</button>
         </div>
-        <ul className="flex mt-10 flex-col gap-5">
-          {list.map((item, index) => (
-            <div className="flex">          
-              <button 
-                className="px-2 mr-2 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition duration-300"
-                >-</button>
-              <li key={index}>{item}</li>
-            </div>
-          ))}
-        </ul>
-      </div>
 
+        {list.length > 0 ? (
+          <ul className="flex mt-10 flex-col gap-5">
+            {list.map((item, index) => (
+              <div className="flex ml-4">          
+                <button 
+                  className="px-2 mr-3 rounded shadow-sm font-light outline-slate-300 bg-[#ECEBE7] hover:bg-[#E1DFDB] transition duration-300"
+                  >-</button>
+                <li key={index} className="flex tracking-widest text-sm font-semibold items-center">{item}</li>
+              </div>
+            ))}
+          </ul>) : (
+            <h1 className="flex justify-center items-center text-sm tracking-widest font-semibold mt-12">finished</h1>
+          )}
+      </div>
     </>
   )
 }
