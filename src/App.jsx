@@ -20,7 +20,7 @@ function App() {
           <input 
               type="text"
               value={item}
-              placeholder="What would you like to do?" 
+              placeholder="What's next?" 
               className="w-full py-2 px-4 mr-2 rounded shadow-xl font-light focus:outline-none focus:shadow-lg focus:shadow-slate-200 duration-100 shadow-gray-100" 
               onChange={(e) => {
                 setItem(e.target.value)
